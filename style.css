@@ -14,6 +14,21 @@
         padding: 20px 10px;
     }
 
+    .calendar-info {
+        margin-top: 10px; /* Space between the heading and the calendar */
+        font-size: 1.1em;
+        color: lightgray;
+    }
+
+    .calendar-icon {
+        font-size: 1.3em; /* Size of the calendar icon */
+        margin-right: 5px; /* Space between icon and date */
+    }
+
+    .event-date {
+        font-size: 1.1em;
+    }
+
     header h1 {
         margin: 0;
     }
