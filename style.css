@@ -8,7 +8,7 @@
     }
 
     header {
-        background: maroon;
+        background: #4682B4;
                 color: white;
         text-align: center;
         padding: 20px 10px;
@@ -21,7 +21,7 @@
     header h2 {
         margin: 10px 0 0;
         font-size: 1.2em;
-        color: lightgray;
+        color: light gray;
     }
 
     .speakers {
@@ -35,7 +35,7 @@
 
     .speaker {
         background: white;
-        border-left: 5px solid blue;
+        border-left: 5px #008080;
         padding: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -55,7 +55,7 @@
     }
 
     footer {
-        background: maroon;
+        background: #4682B4;
         color: white;
         text-align: center;
         padding: 10px;
