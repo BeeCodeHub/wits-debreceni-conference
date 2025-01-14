@@ -40,6 +40,8 @@
     }
 
     .speakers {
+        /*background: linear-gradient(rgba(225, 225, 225, 0.8), rgba(225, 225, 225, 0.8)),
+                    url('Wits_Centenary_Logo_Large.svg') no-repeat center center;*/
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -49,29 +51,38 @@
     }
 
     .speaker {
-        background: white;
+        background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
+                    url('deblogo.png') no-repeat center center;
         border-left: 5px #008080;
         padding: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .speaker h2 {
-        margin: 0 0 10px;
-        color: maroon;
+    .speakers h2 {
+        color: maroon; /* Blue color for the heading */
+        text-align: center;
+        margin-bottom: 5px;
     }
 
     .speaker h3 {
         margin: 0 0 10px;
-        color: blue;
+        color: #008080;
     }
 
     .speaker p {
         margin: 0;
+        color: #333;
+    }
+
+    .speaker p:first-of-type {
+        margin: 0 0 10px;
+        color: #87CEEB;   /* Example: Change the color of the first paragraph */
     }
 
     footer {
-        background: #4682B4;
-        color: white;
+        background: linear-gradient(rgba(225, 225, 225, 0.8), rgba(225, 225, 225, 0.8)),
+                    url('Wits_Centenary_Logo_Large.svg') no-repeat center center;
+        color: darkblue;
         text-align: center;
         padding: 10px;
         position: relative;
