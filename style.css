@@ -1,0 +1,76 @@
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: beige;
+        color: #333;
+    }
+
+    header {
+        background: maroon;
+                color: white;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    header h2 {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+        color: lightgray;
+    }
+
+    .speakers {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .speaker {
+        background: white;
+        border-left: 5px solid blue;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .speaker h2 {
+        margin: 0 0 10px;
+        color: maroon;
+    }
+
+    .speaker h3 {
+        margin: 0 0 10px;
+        color: blue;
+    }
+
+    .speaker p {
+        margin: 0;
+    }
+
+    footer {
+        background: maroon;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    @media (max-width: 600px) {
+        .speakers {
+            padding: 10px;
+        }
+
+        .speaker {
+            padding: 10px;
+        }
+    }
+  </style>
