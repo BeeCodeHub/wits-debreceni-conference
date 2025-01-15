@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
+    background: linear-gradient(rgba(225, 225, 225, 0.94), rgba(225, 225, 225, 0.94)),
                 url('Wits_Centenary_Logo_Large.svg') no-repeat center center;
     background-size: 100%;
 }
@@ -15,7 +15,36 @@ header {
     padding: 20px 10px;
 }
 
+.event-details {
+    margin-top: 10px;
+    color: maroon;
+}
+
+.event-agenda h2 {
+    margin-top: 10px;
+    font-size: 1.6em;
+    color: maroon;
+    padding-left: 200px;
+}
+
+.event-agenda {
+    margin-left: 30px; /* Move it to the right */
+    padding-left: 200px;
+}
+
 .calendar-info {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: black;
+}
+
+.time-info {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: black;
+}
+
+.location-info {
     margin-top: 10px;
     font-size: 1.1em;
     color: black;
@@ -26,7 +55,25 @@ header {
     margin-right: 5px;
 }
 
+.time-icon {
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
+.location-icon {
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
 .event-date {
+    font-size: 1.1em;
+}
+
+.event-time {
+    font-size: 1.1em;
+}
+
+.event-location {
     font-size: 1.1em;
 }
 
@@ -40,6 +87,11 @@ header h2 {
     color: lightgray;
 }
 
+.coffee-icon {
+    font-size: 24px; /* Adjust the value as needed */
+}
+
+
 /* Flex container for event details, agenda, and speakers */
 .event-content {
     display: flex;
@@ -47,7 +99,7 @@ header h2 {
     justify-content: space-between;
     padding: 5px;
     max-width: 1200px;
-    margin: 60px;
+    margin: 30px;
 }
 
 .event-details, .event-agenda, .speakers {
@@ -59,62 +111,63 @@ header h2 {
     max-width: 48%;
 }
 
-/* Flex container for speakers - Change flex-direction to row */
 .speakers {
     display: flex;
-    gap: 20px;           /* Add spacing between speaker cards */
+    gap: 20px;
     max-width: 100%;
 }
 
-/* Ensure each speaker card has a flexible width */
+
 .speaker {
-    flex: 1 1 calc(25% - 20px);   /* This will ensure 4 cards per row (adjust as needed) */
-    background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
+    flex: 1 1 calc(25% - 20px);
+    background: linear-gradient(rgba(225, 225, 225, 0.88), rgba(225, 225, 225, 0.88)),
                 url('deblogo.png') no-repeat center center;
-    border-left: 5px solid #008080;
+
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;          /* Optional: Add space below each card */
+    margin-bottom: 20px;
 }
 
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 768px) {
     .speaker {
-        flex: 1 1 calc(50% - 20px); /* 2 speakers per row */
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
     .speaker {
-        flex: 1 1 100%;   /* 1 speaker per row on very small screens */
+        flex: 1 1 100%;
     }
 }
 
 .speakers-section h2 {
-    text-align: center;  /* Centers the heading */
-    color: maroon;       /* Optional: styling the color */
-    margin-bottom: 40px; /* Optional: adding space below the heading */
+    text-align: center;
+    color: maroon;
+    margin-bottom: 30px;
 }
 
 .speakers h2 {
     color: #4682B4;
     text-align: center;
-    margin-bottom: 5px;
+    font-size: 1.2em;
+    margin-bottom: 50px;
 }
 
 .speaker h3 {
     margin: 0 0 10px;
-    color: #008080;
+    color: #2F4F4F;
 }
 
 .speaker p {
-    margin: 0;
+    margin: 10px;
     color: #333;
 }
 
 .speaker p:first-of-type {
     margin: 0 0 10px;
-    color: #87CEEB;
+    color: #2F4F4F;
+    font-weight: bold;
 }
 
 footer {
