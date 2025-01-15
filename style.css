@@ -1,102 +1,147 @@
-  <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: beige;
-        color: #333;
+html, body {
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
+                url('Wits_Centenary_Logo_Large.svg') no-repeat center center;
+    background-size: 100%;
+}
+
+header {
+    background: #4682B4;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.calendar-info {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: black;
+}
+
+.calendar-icon {
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
+.event-date {
+    font-size: 1.1em;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: lightgray;
+}
+
+/* Flex container for event details, agenda, and speakers */
+.event-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    max-width: 1200px;
+    margin: 60px;
+}
+
+.event-details, .event-agenda, .speakers {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.event-details, .event-agenda {
+    max-width: 48%;
+}
+
+/* Flex container for speakers - Change flex-direction to row */
+.speakers {
+    display: flex;
+    gap: 20px;           /* Add spacing between speaker cards */
+    max-width: 100%;
+}
+
+/* Ensure each speaker card has a flexible width */
+.speaker {
+    flex: 1 1 calc(25% - 20px);   /* This will ensure 4 cards per row (adjust as needed) */
+    background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
+                url('deblogo.png') no-repeat center center;
+    border-left: 5px solid #008080;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;          /* Optional: Add space below each card */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .speaker {
+        flex: 1 1 calc(50% - 20px); /* 2 speakers per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .speaker {
+        flex: 1 1 100%;   /* 1 speaker per row on very small screens */
+    }
+}
+
+.speakers-section h2 {
+    text-align: center;  /* Centers the heading */
+    color: maroon;       /* Optional: styling the color */
+    margin-bottom: 40px; /* Optional: adding space below the heading */
+}
+
+.speakers h2 {
+    color: #4682B4;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.speaker h3 {
+    margin: 0 0 10px;
+    color: #008080;
+}
+
+.speaker p {
+    margin: 0;
+    color: #333;
+}
+
+.speaker p:first-of-type {
+    margin: 0 0 10px;
+    color: #87CEEB;
+}
+
+footer {
+    background: linear-gradient(rgba(225, 225, 225, 0.8), rgba(225, 225, 225, 0.8)),
+                url('Wits_Centenary_Logo_Large.svg') no-repeat center center;
+    color: darkblue;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .event-content {
+        flex-direction: column;
     }
 
-    header {
-        background: #4682B4;
-                color: white;
-        text-align: center;
-        padding: 20px 10px;
-    }
-
-    .calendar-info {
-        margin-top: 10px; /* Space between the heading and the calendar */
-        font-size: 1.1em;
-        color: lightgray;
-    }
-
-    .calendar-icon {
-        font-size: 1.3em; /* Size of the calendar icon */
-        margin-right: 5px; /* Space between icon and date */
-    }
-
-    .event-date {
-        font-size: 1.1em;
-    }
-
-    header h1 {
-        margin: 0;
-    }
-
-    header h2 {
-        margin: 10px 0 0;
-        font-size: 1.2em;
-        color: light gray;
+    .event-details, .event-agenda, .speakers {
+        max-width: 100%;
     }
 
     .speakers {
-        /*background: linear-gradient(rgba(225, 225, 225, 0.8), rgba(225, 225, 225, 0.8)),
-                    url('Wits_Centenary_Logo_Large.svg') no-repeat center center;*/
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-        max-width: 800px;
-        margin: auto;
+        padding: 10px;
     }
 
     .speaker {
-        background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
-                    url('deblogo.png') no-repeat center center;
-        border-left: 5px #008080;
-        padding: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .speakers h2 {
-        color: maroon; /* Blue color for the heading */
-        text-align: center;
-        margin-bottom: 5px;
-    }
-
-    .speaker h3 {
-        margin: 0 0 10px;
-        color: #008080;
-    }
-
-    .speaker p {
-        margin: 0;
-        color: #333;
-    }
-
-    .speaker p:first-of-type {
-        margin: 0 0 10px;
-        color: #87CEEB;   /* Example: Change the color of the first paragraph */
-    }
-
-    footer {
-        background: linear-gradient(rgba(225, 225, 225, 0.8), rgba(225, 225, 225, 0.8)),
-                    url('Wits_Centenary_Logo_Large.svg') no-repeat center center;
-        color: darkblue;
-        text-align: center;
         padding: 10px;
-        position: relative;
-        bottom: 0;
-        width: 100%;
     }
-
-    @media (max-width: 600px) {
-        .speakers {
-            padding: 10px;
-        }
-
-        .speaker {
-            padding: 10px;
-        }
-    }
-  </style>
+}
