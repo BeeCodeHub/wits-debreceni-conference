@@ -128,19 +128,6 @@ header h2 {
     margin-bottom: 20px;
 }
 
-
-@media (max-width: 768px) {
-    .speaker {
-        flex: 1 1 calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .speaker {
-        flex: 1 1 100%;
-    }
-}
-
 .speakers-section h2 {
     text-align: center;
     color: maroon;
@@ -181,6 +168,12 @@ footer {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .speaker {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
 @media (max-width: 600px) {
     .event-content {
         flex-direction: column;
@@ -188,6 +181,7 @@ footer {
 
     .event-details, .event-agenda, .speakers {
         max-width: 100%;
+        padding: 10px;
     }
 
     .speakers {
@@ -196,5 +190,22 @@ footer {
 
     .speaker {
         padding: 10px;
+    }
+
+    /* Adjust agenda and details */
+    .event-agenda h2 {
+        padding-left: 0;
+        font-size: 1.4em;
+    }
+
+    .event-agenda {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .speaker {
+        flex: 1 1 100%;
     }
 }
