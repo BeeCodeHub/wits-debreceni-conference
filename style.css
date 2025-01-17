@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(225, 225, 225, 0.94), rgba(225, 225, 225, 0.94)),
+    background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
                 url('Wits_Centenary_Logo_Large.svg') no-repeat center center;
     background-size: 100%;
 }
@@ -12,7 +12,9 @@ header {
     background: #4682B4;
     color: white;
     text-align: center;
-    padding: 20px 10px;
+    padding: 10px 10px;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .event-details {
@@ -83,16 +85,14 @@ header h1 {
 
 header h2 {
     margin: 10px 0 0;
-    font-size: 1.2em;
-    color: lightgray;
+    font-size: 0.1em;
+    color: white;
 }
 
 .coffee-icon {
-    font-size: 24px; /* Adjust the value as needed */
+    font-size: 24px;
 }
 
-
-/* Flex container for event details, agenda, and speakers */
 .event-content {
     display: flex;
     flex-wrap: wrap;
@@ -111,13 +111,6 @@ header h2 {
     max-width: 48%;
 }
 
-.speakers {
-    display: flex;
-    gap: 20px;
-    max-width: 100%;
-}
-
-
 .speaker {
     flex: 1 1 calc(25% - 20px);
     background: linear-gradient(rgba(225, 225, 225, 0.88), rgba(225, 225, 225, 0.88)),
@@ -126,6 +119,21 @@ header h2 {
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.speaker-photo {
+  width: 130px !important;
+  height: 130px !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+.speakers-section {
+    display: grid;
+    gap: 0;
+    max-width: 100%;
 }
 
 .speakers-section h2 {
@@ -138,23 +146,63 @@ header h2 {
     color: #4682B4;
     text-align: center;
     font-size: 1.2em;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .speaker h3 {
+    margin: 0;
+    color: #2F4F4F;
+}
+
+.speakers {
+    display: flex;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.lecture {
+    flex: 1 1 calc(25% - 20px);
+    background: linear-gradient(rgba(225, 225, 225, 0.88), rgba(225, 225, 225, 0.88)),
+                url('deblogo.png') no-repeat center center;
+
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2px;
+}
+
+.lecture-section h2 {
+    text-align: center;
+    color: maroon;
+    margin-bottom: 10px;
+}
+
+.lecture h2 {
+    color: #4682B4;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.lecture h3 {
     margin: 0 0 10px;
     color: #2F4F4F;
 }
 
-.speaker p {
+.lecture p {
     margin: 10px;
     color: #333;
 }
 
-.speaker p:first-of-type {
+.lecture p:first-of-type {
     margin: 0 0 10px;
     color: #2F4F4F;
     font-weight: bold;
+}
+
+.lectures {
+    display: flex;
+    gap: 20px;
+    max-width: 100%;
 }
 
 footer {
@@ -171,6 +219,18 @@ footer {
 @media (max-width: 768px) {
     .speaker {
         flex: 1 1 calc(50% - 20px);
+    }
+    .speakers {
+        grid-template-columns: repeat(3, 1fr); /* 3 images per row on larger screens */
+    }
+    header {
+        padding: 15px 5px; /* Reduce padding for smaller screens */
+    }
+    header h1 {
+        font-size: 1.5em; /* Adjust font size */
+    }
+    header h2 {
+        font-size: 1em; /* Adjust font size for subtitle */
     }
 }
 
@@ -207,5 +267,16 @@ footer {
 @media (max-width: 480px) {
     .speaker {
         flex: 1 1 100%;
+    }
+    header {
+        padding: 10px 5px; /* Further reduce padding for very small screens */
+    }
+
+    header h1 {
+        font-size: 1.2em; /* Smaller font size */
+    }
+
+    header h2 {
+        font-size: 0.9em; /* Adjust subtitle size */
     }
 }
