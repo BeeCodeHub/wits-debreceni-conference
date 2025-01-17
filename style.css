@@ -114,7 +114,7 @@ header h2 {
 .speaker {
     flex: 1 1 calc(25% - 20px);
     background: linear-gradient(rgba(225, 225, 225, 0.88), rgba(225, 225, 225, 0.88)),
-                url('deblogo.png') no-repeat center center;
+                url('') no-repeat center center;
 
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -163,7 +163,7 @@ header h2 {
 .lecture {
     flex: 1 1 calc(25% - 20px);
     background: linear-gradient(rgba(225, 225, 225, 0.88), rgba(225, 225, 225, 0.88)),
-                url('deblogo.png') no-repeat center center;
+                url('') no-repeat center center;
 
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
