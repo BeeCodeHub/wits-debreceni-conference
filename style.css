@@ -5,7 +5,8 @@ html, body {
     font-family: Arial, sans-serif;
     background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.9)),
                 url('Wits_Centenary_Logo_Large.svg') no-repeat center center;
-    background-size: 100%;
+    background-size: 80%;
+    background-position: left 210px;
 }
 
 header {
@@ -13,8 +14,8 @@ header {
     color: white;
     text-align: center;
     padding: 10px 10px;
-    width: 100%; /* Ensure full width */
-    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .event-details {
@@ -26,12 +27,13 @@ header {
     margin-top: 10px;
     font-size: 1.6em;
     color: maroon;
-    padding-left: 200px;
+    padding-left: 0;
 }
 
 .event-agenda {
-    margin-left: 30px; /* Move it to the right */
+    margin-left: 70px; /* Move it to the right */
     padding-left: 200px;
+    align-items: flex-end;
 }
 
 .calendar-info {
@@ -81,24 +83,24 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 3.5em;
 }
 
 header h2 {
     margin: 10px 0 0;
-    font-size: 0.1em;
-    color: white;
+    font-size: 0.005em;
 }
 
 .coffee-icon {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .event-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 5px;
-    max-width: 1200px;
+    padding: 3px;
+    max-width: 1600px;
     margin: 30px;
 }
 
@@ -108,101 +110,68 @@ header h2 {
 }
 
 .event-details, .event-agenda {
-    max-width: 48%;
+    max-width: 90%;
 }
 
-.speaker {
-    flex: 1 1 calc(25% - 20px);
-    background: linear-gradient(rgba(225, 225, 225, 0.88), rgba(225, 225, 225, 0.88)),
-                url('') no-repeat center center;
-
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: center;
+/* Section Title */
+.speakers-lectures h2 {
+  text-align: center;
+  color: maroon;
+  margin-bottom: 90px;
 }
 
-.speaker-photo {
-  width: 130px !important;
-  height: 130px !important;
-  border-radius: 50% !important;
-  object-fit: cover;
-  margin-bottom: 0;
-}
-
+/* Speakers Section */
 .speakers-section {
-    display: grid;
-    gap: 0;
-    max-width: 100%;
+  display: flex;
+  gap: 2px;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
-.speakers-section h2 {
-    text-align: center;
-    color: maroon;
-    margin-bottom: 30px;
+/* Speaker Card */
+.speaker {
+  flex: 0 0 calc(20% - 16px);
+  background: linear-gradient(rgba(225, 225, 225, 0.88), rgba(225, 225, 225, 0.88));
+  padding: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
 }
 
-.speakers h2 {
-    color: #4682B4;
-    text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+/* Speaker Photo */
+.speaker-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
+/* Speaker Name */
 .speaker h3 {
-    margin: 0;
-    color: #2F4F4F;
+  margin: 0;
+  color: #2F4F4F;
+  font-size: 1.4em;
 }
 
-.speakers {
-    display: flex;
-    gap: 20px;
-    max-width: 100%;
+/* Speaker Affiliation */
+.speaker p {
+  color: #4682B4;
+  margin: 5px 0;
 }
 
+/* Lecture Link */
 .lecture {
-    flex: 1 1 calc(25% - 20px);
-    background: linear-gradient(rgba(225, 225, 225, 0.88), rgba(225, 225, 225, 0.88)),
-                url('') no-repeat center center;
-
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2px;
+  display: block;
+  margin-top: 20px;
+  color: #0066cc;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.lecture-section h2 {
-    text-align: center;
-    color: maroon;
-    margin-bottom: 10px;
-}
-
-.lecture h2 {
-    color: #4682B4;
-    text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.lecture h3 {
-    margin: 0 0 10px;
-    color: #2F4F4F;
-}
-
-.lecture p {
-    margin: 10px;
-    color: #333;
-}
-
-.lecture p:first-of-type {
-    margin: 0 0 10px;
-    color: #2F4F4F;
-    font-weight: bold;
-}
-
-.lectures {
-    display: flex;
-    gap: 20px;
-    max-width: 100%;
+.lecture:hover {
+  text-decoration: underline;
 }
 
 footer {
