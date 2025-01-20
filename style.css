@@ -55,17 +55,17 @@ header {
 }
 
 .calendar-icon {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-right: 5px;
 }
 
 .time-icon {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-right: 5px;
 }
 
 .location-icon {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-right: 5px;
 }
 
@@ -159,6 +159,7 @@ header h2 {
 .speaker p {
   color: #4682B4;
   margin: 5px 0;
+  font-weight: bold;
 }
 
 /* Lecture Link */
